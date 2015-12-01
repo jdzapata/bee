@@ -147,7 +147,8 @@ func readAppDirectories(directory string, paths *[]string) {
 			continue
 		}
 
-		if path.Ext(fileInfo.Name()) == ".go" {
+		extension := path.Ext(fileInfo.Name())
+		if extension == ".go" || extension == ".js" || extension == ".tpl" || extension == ".css" {
 			*paths = append(*paths, directory)
 			useDirectory = true
 		}

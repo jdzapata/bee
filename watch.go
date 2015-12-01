@@ -231,7 +231,7 @@ func checkTMPFile(name string) bool {
 	return false
 }
 
-var watchExts = []string{".go"}
+var watchExts = []string{".go", ".js", ".tpl", ".css"}
 
 // checkIfWatchExt returns true if the name HasSuffix <watch_ext>.
 func checkIfWatchExt(name string) bool {
